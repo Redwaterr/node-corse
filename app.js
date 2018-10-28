@@ -1,6 +1,7 @@
 const express = require("express");
 const hbs = require("hbs");
 const fs = require("fs");
+const port = process.env.PORT || 3000;
 
 var app = express();
 
@@ -58,6 +59,6 @@ app.get("/404",(req,res) => {
     res.send("404 NOT FOUND!");
 });
 
-app.listen(3000,() => {         // Serverimiz 3000 portunda çalışıyor.
-    console.log("Server is running on port 3000!")
+app.listen(port,() => {         // Serverimiz 3000 portunda çalışıyor.
+    console.log("Server is running on port ",port);
 });
